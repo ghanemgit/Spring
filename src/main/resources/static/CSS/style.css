@@ -1,5 +1,5 @@
 
-body {
+#hello {
     color: aqua;
     text-align-all: center;
     text-align: center;
@@ -7,4 +7,44 @@ body {
     /*max-font-size: 7000;*/
     font-size: xxx-large;
     align-content: center;
+}
+#capitalize {
+    color: aqua;
+    text-align-all: center;
+    text-align: center;
+    background-color: black;
+    /*max-font-size: 7000;*/
+    font-size: xxx-large;
+    align-content: center;
+}
+
+
+#indexForm {
+    background-color: black;
+    color: antiquewhite;
+    font-size: x-large;
+    align-content: center;
+    text-align: center;
+    text-align-all: center;
+}
+
+input[type=text],input[type=number],input[type=url] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #46e8ff;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 10%;
+    background-color: antiquewhite;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: x-large;
 }

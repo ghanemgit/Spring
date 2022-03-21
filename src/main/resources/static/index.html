@@ -1,12 +1,38 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script th:text=""
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Albums</title>
+    <script th:src="@{/script.js}"></script>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>
-<p>Get your Message => <a href="/hello">here</a></p>
-<p>Capitalize your Name => <a href="/capitalize">Go</a> </p>
+<body id="indexForm">
+
+<form action="/addAlbum" method="post" >
+
+    <div id="boxes">
+    <p>Artist</p>
+    <input type="text" name="artist"/>
+    <p>Song Count</p><input type="number" name="songCount"/>
+    <p>Length</p><input type="number" name="length"/>
+    <p>Image Url</p><input type="url" name="imageUrl"/>
+    <br><br><button type="submit">Add</button>
+    </div>
+</form>
+
+<ul th:each="albums: ${AlbumList}">
+    <p>ID</p><span th:text="${albums.id}"></span>
+    <p>Artist</p><span th:text="${albums.artist}"></span>
+    <p>Song count</p><span th:text="${albums.songCount}"></span>
+    <p>Length</p><span th:text="${albums.length}"></span>
+    <p>Image Url</p><span th:text="${albums.imageUrl}"></span>
+
+    <p>**********************************************************</p>
+
+</ul>
 </body>
 </html>

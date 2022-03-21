@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
 <head>
     <title>Getting Started: Hello world</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link th:href="@{/CSS/style.css}" rel="stylesheet"/>
     <script th:src="@{/Js/script.js}"></script>
+    <link rel="stylesheet" href="/CSS/style.css">
 </head>
-<body>
+<body id="capitalize">
 <p th:text="'Capitalizing => '+ ${toCapitalize}"></p>
 </body>
 </html>
