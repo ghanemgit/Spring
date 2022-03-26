@@ -18,14 +18,21 @@
     align-content: center;
 }
 
+body{
+    background-color: black;
+}
 
-#indexForm {
+#boxes,#boxes2 {
     background-color: black;
     color: antiquewhite;
     font-size: x-large;
     align-content: center;
     text-align: center;
     text-align-all: center;
+}
+
+h2{
+    color: red;
 }
 
 input[type=text],input[type=number],input[type=url] {

@@ -1,5 +1,6 @@
 package com.spring.songr.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -7,34 +8,31 @@ import lombok.Setter;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
-import java.util.Set;
 
-
+@JsonIgnoreProperties({"album"})
 @Setter
 @Getter
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
-public class Album {
-
+public class Song {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
     @NonNull
-    String name;
+    private String title;
     @NonNull
-    String artist;
-    @NonNull
-    int songCount;
-    @NonNull
-    long lengthInSecond;
+    private int lengthInSecond;
 
     @NonNull
-    String imageUrl;
+    private int trackNumber;
 
 
-    @OneToMany(mappedBy = "album")
-    Set<Song> songs;
+    @ManyToOne
+    Album album;
+
+
+
 }
