@@ -21,3 +21,14 @@
 - "/addAlbum" => To add an album as a user, save it in database, and It's related to add button you cannot reach directly.
 - "/getalbum" => To get the content of my database (albums).
 #### * you can run a single Gradle command to launch your server => pgstart
+
+# Lab13
+
+#### In this lab I learned how to make relation between different table in database and how to render specific thing from the database and increase my knowledge about how to deal with endpoints.
+
+### Until now the endpoint I do applied is
+- "/album/{id}" => To get a specific album from the database and all of it content.
+- "/song/{title}" => To get songs by title.
+- "/songs" => To get all songs from the database;
+- "/addSong" => To add song to specific album.
+#### * you can run a single Gradle command to launch your server => pgstart

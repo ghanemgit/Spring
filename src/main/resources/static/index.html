@@ -10,17 +10,29 @@
     <script th:src="@{/script.js}"></script>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body id="indexForm">
+<body>
 
 <form action="/addAlbum" method="post" >
 
     <div id="boxes">
-    <p>Artist</p>
-    <input type="text" name="artist"/>
+        <h2>Add an Album</h2>
+    <p>Album Name</p><input type="text" name="name"/>
+    <p>Artist</p><input type="text" name="artist"/>
     <p>Song Count</p><input type="number" name="songCount"/>
-    <p>Length</p><input type="number" name="length"/>
+    <p>Length</p><input type="number" name="lengthInSecond"/>
     <p>Image Url</p><input type="url" name="imageUrl"/>
     <br><br><button type="submit">Add</button>
+    </div>
+</form>
+
+<form action="/addSong" method="post" >
+    <div id="boxes2">
+        <h2>Add a Song</h2>
+        <p>Album Id</p><input type="number" name="AlbumId"/>
+        <p>Song Title</p><input type="text" name="title"/>
+        <p>Length of Song In Second</p><input type="number" name="lengthInSecond"/>
+        <p>Track Number</p><input type="number" name="trackNumber"/>
+        <br><br><button type="submit">Add</button>
     </div>
 </form>
 
