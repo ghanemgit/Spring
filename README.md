@@ -24,7 +24,7 @@
 
 # Lab13
 
-#### In this lab I learned how to make relation between different table in database and how to render specific thing from the database and increase my knowledge about how to deal with endpoints.
+#### In this lab I learned how to make different relation type like one-to-one, many-to-one and many-to-many between different table in database and how to define quires using the method way and sove jackson pending issues like stake overflow, also render specific thing from the database and increase my knowledge about how to deal with endpoints.
 
 ### Until now the endpoint I do applied is
 - "/album/{id}" => To get a specific album from the database and all of it content.
